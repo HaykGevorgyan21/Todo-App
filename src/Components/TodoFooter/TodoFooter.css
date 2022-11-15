@@ -1,0 +1,25 @@
+.todoFooter{
+    margin: auto;
+    width: 400px;
+    height: 50px;
+    background-image: linear-gradient(to right bottom, #8528e1, #791fe5, #6a15e9, #570aed, #3d00f2);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    
+}
+
+.delet{
+    border: none;
+    background-color: wheat;
+    border-radius: 8px;
+    padding: 3px;
+    width: 130px;
+    cursor: pointer;
+    color: #3d00f2;
+    font-weight: bold;
+}

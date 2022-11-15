@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.register_bar {
+  width: 300px;
+  padding: 12px 12px 12px 50px;
+  margin-left: 15%;
+  margin-top: 20px;
+  border-radius: 32px;
+  border: none;
+  outline: none;
+  box-shadow: 5px 5px 34px 6px #e1e9fc;
+}
+.show {
+  display: none;
+}
+.close {
+  display: block;
+}
+.show_button {
+  position: absolute;
+  margin-left: 92%;
+  margin-top: -20%;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background-image: url(https://cdn.pixabay.com/photo/2014/04/03/00/35/engine-308762_1280.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 20px;
+  animation: 4s linear infinite;
+}
+
+.change_settings {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+.show_button:hover {
+  animation-name: spin;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.register_button {
+  margin-left: 30%;
+  margin-top: 15px;
+  width: 175px;
+  padding: 7px;
+  border-radius: 32px;
+  border: none;
+  outline: none;
+  background-image: linear-gradient(
+    to right bottom,
+    #8528e1,
+    #791fe5,
+    #6a15e9,
+    #570aed,
+    #3d00f2
+  );
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+}
+.register_button:hover {
+  box-shadow: 5px 5px 30px 6px #852de7;
+}
+.backgrond_form {
+  width: 400px;
+  height: 40vh;
+  margin-left: 185%;
+  margin-top: -45%;
+}
+
+.input_image {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  margin-left: 5%;
+  margin: auto;
+  margin-left: 5%;
+  margin-top: 24px;
+
+  z-index: 1;
+  animation: 4s linear infinite;
+}
+.register_bar:hover {
+  box-shadow: 5px 5px 34px 6px #852de7;
+}
+.input_image:hover {
+  animation-name: spin;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media only screen and (max-width: 1254px) {
+    .backgrond_form{
+    left: -20%;
+  }
+  .show_button{
+    left: 40%;
+    top: 20px;
+  }
+}
+@media only screen and (max-width: 1359px) {
+  .backgrond_form {
+    display: grid;
+    position: relative;
+    margin-left: 170%;
+ margin-top: -200;
+  }
+  .show_button {
+    display: grid;
+    position: relative;
+    margin-left: 250px;
+          
+      }
+}
+@media only screen and (max-width: 1212px) {
+  .backgrond_form {
+    display: grid;
+    position: relative;
+    margin-left: -5%;
+    margin-top: 5px;
+  }
+  .show_button {
+    display: grid;
+    position: relative;
+    margin-left: 5%;
+  }
+}
+@media only screen and (max-width: 1213px){
+  .backgrond_form{
+      flex-wrap: wrap;
+      height: 100%;
+      margin-bottom: 70px;
+   }
+   .show_button{
+ text-align: center; 
+margin-left: 0%;
+   }
+ }
+@media only screen and (max-width: 1050px) {
+  .background_image_form {
+    display: none;
+  }
+  .backgrond_form {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 625px) {
+  .login_form {
+    margin: auto;
+    margin-top: 100px;
+  }
+}

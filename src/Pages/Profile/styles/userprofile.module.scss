@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background_profile_page{
+
+    position:absolute;
+    width: 100%;
+    height: 92vh;
+    background-image: linear-gradient(to right top, #5e17ec, #5d16e8, #5c16e4, #5a15e1, #5915dd);
+}
+
+
+.profile_image{
+    width: 250px;
+    height: 250px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 16px;
+    background-image: url(https://marketplace.canva.com/EAE6OJ2qP8U/1/0/1600w/canva-gamer-with-glasses-character-twitch-profile-picture-CVfgWIJGgRo.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.add_photo{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-left: 20%;
+    background-image: url(https://findicons.com/files/icons/1014/ivista/256/plus.png);
+    background-size: contain;
+    cursor: pointer;
+}
+
+.profile_aboute{
+     width: 500px;
+    height: 30vh;
+    margin-left: 2%;
+    margin-top: 0%;
+    display: inline-block;
+   }
+
+.profile_aboute >p{
+    font-size: 22px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    padding-top: 12px;
+    column-gap: 5px;
+}
+
+@media only screen and (max-width: 1255px){
+
+    .background_profile_page{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+           }
+           .profile_aboute{
+            text-align: center;
+            margin-top: 50px;
+           }
+.profile_image{
+    margin: auto;
+    margin-top: 30px;
+}
+.add_photo{
+    margin: auto;
+}
+}
+
+@media only screen and (max-width: 715){
+
+    .background_profile_page{
+        background-repeat: repeat;
+       overflow: hidden;
+    }
+
+}
+@media only screen and (max-width: 1212px){
+    .background_profile_page{
+        flex-wrap: wrap;
+        height: 100%;
+     }
+     .profile_aboute{
+   text-align: center; 
+  margin-left: 20%;
+     }
+   }

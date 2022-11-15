@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.lable_profile{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+.uload_button{
+    width: 95px;
+    height: 30px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    background-image: url(https://avoradigital.com/online/button.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.brending_save{
+    width: 95px;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    background-image: url(https://support.getadministrate.com/hc/article_attachments/115020189508/button_save_green.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -7px;
+}
+.upload_div{
+    margin-top: -10px;
+    }
