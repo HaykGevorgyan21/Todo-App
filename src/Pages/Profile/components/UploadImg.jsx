@@ -5,7 +5,7 @@ import REQUESTS from "../../../API/requests";
 import FormData from "form-data";
 
 function UploadImg() {
-  const [form] = Form.useForm();
+  // const [form] = Form.useForm();
   const [profileImg, setProfileImg] = useState([]);
   const [profileImgUrl, setProfileImgUrl] = useState("");
   const [loading, setLoading] = useState(false);
@@ -37,15 +37,18 @@ function UploadImg() {
   console.log(profileImg);
   const onFinish = () => {
     setLoading(true);
-  
-    let formData =   new FormData();
 
-    console.log(profileImg);
+    let formData = new FormData();
+
     profileImg.forEach((e) => {
-      formData.append("avatar",e);
+      formData.append("avatar", e);
     });
-  
-   
+
+    for (var key of formData.entries()) {
+      console.log(key[0] + ", " + key[1]);
+    }
+
+    console.log(formData, "formdata");
     const colback = (data) => {
       console.log(data);
       setLoading(false);
@@ -66,15 +69,17 @@ function UploadImg() {
   };
 
   return (
-    <div className={classes['upload_div']}>
-      <Form form={form} name="profile" layout="vertical" onFinish={onFinish}>
-        <Form.Item className={classes['lable_profile']} label={"Profile imges"}>
+    <div className={classes["upload_div"]}>
+      <Form name="profile" layout="vertical" onFinish={onFinish}>
+        <Form.Item className={classes["lable_profile"]} label={"Profile imges"}>
           <div className={classes["app_uload_form"]}>
             <Image className={classes["uload_img"]} src={profileImgUrl || ""} />
 
             <Upload {...propsprofileImg} fileList={profileImg}>
-              <Button className={classes["uload_button"]} type="primary">
-                             </Button>
+              <Button
+                className={classes["uload_button"]}
+                type="primary"
+              ></Button>
             </Upload>
           </div>
         </Form.Item>
@@ -84,9 +89,8 @@ function UploadImg() {
             type="primary"
             htmlType="submit"
             className={classes["brending_save"]}
-            loading={loading}>
-            
-          </Button>
+            loading={loading}
+          ></Button>
         </Form.Item>
       </Form>
     </div>
