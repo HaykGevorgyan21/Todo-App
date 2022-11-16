@@ -23,6 +23,14 @@ const REQUESTS = {
   UPLOAD_IMG: (headers, body, colback, errorColback) => {
     request(URLS.upload_img, "POST", body, headers, colback, errorColback);
   },
+
+  ADD_TODO: (headers, body, colback, errorColback) => {
+    request(URLS.add_todo, "POST", body, headers, colback, errorColback);
+  },
+
+  GET_TODO: (headers, colback, errorColback) => {
+    request(URLS.add_todo, "GET", {}, headers, colback, errorColback);
+  },
 };
 
 export default REQUESTS;
