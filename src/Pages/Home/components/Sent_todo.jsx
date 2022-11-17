@@ -4,6 +4,7 @@ import send_todo from "./sendTodo";
 import get_todo_list from "./getTodo";
 import { useEffect } from "react";
 import RenderTodoList from "./RenderTodo";
+import classes from '../style/sendtodo.module.scss'
 
 function SendTodoList() {
   const [todo, setDodo] = useState();
@@ -15,12 +16,12 @@ function SendTodoList() {
 
   return (
     <div>
-      <input
+      <input className={classes['input_todo']}
         onChange={(e) => {
           setDodo(e.target.value);
         }}
       />
-      <button
+      <button className={classes['add_todo']}
         onClick={() => {
           send_todo(todo, get_todo_list(setTodoList));
         }}

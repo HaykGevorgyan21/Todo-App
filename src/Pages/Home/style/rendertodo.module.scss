@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.render_page{
+       width: 320px;
+    height: 350px;
+    margin-top: -10px;
+    margin-left: 40%;
+    background-image: url(https://media.istockphoto.com/id/184921412/photo/crumpled-yellow-notepad.jpg?s=612x612&w=0&k=20&c=LUZ2GVQvgtPGhjAHc-ErN2Vn9iXoThUM4_H1kTyTN-4=);
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+
+
+.item{
+    list-style: none;
+    margin-left: 20px;
+    column-gap: 10px;
+    margin-top: 10px;
+     color: rgb(1, 96, 96);
+    font-size: 18px;
+    font-weight: bold;
+    font-family: sans-serif;
+}

@@ -1,0 +1,33 @@
+.input_todo{
+   margin-left: 40%;
+   border: none;
+   outline: none;
+   background-color: rgb(230, 207, 177);
+   color: rgb(1, 96, 96);
+   font-size: 18px;
+   font-weight: bold;
+   font-family: sans-serif;
+   width: 250px;
+   padding: 5px;
+   margin-top: 100px;
+    
+}
+
+body{
+    background-image: url(https://phonoteka.org/uploads/posts/2021-04/1619079453_30-phonoteka_org-p-ofisnii-stol-fon-31.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.add_todo{
+    background-color: #5A15DF;
+    border: none;
+    padding: 7px;
+    font-size: 14px;
+    font-family: sans-serif;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 70px;
+
+}
