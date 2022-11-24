@@ -1,24 +1,21 @@
 import REQUESTS from "../../../API/requests";
 import get_todo_list from "./getTodo";
-const send_todo = (todo, setTodoList, setDodo) => {
-  const body = {
-    description: todo,
-  };
-
+function delete_todo_list(id, setTodoList) {
   const colback = (data) => {
-    setDodo("");
     get_todo_list(setTodoList);
   };
-  const errorColback = (error) => {};
-  REQUESTS.ADD_TODO(
+  const errorColback = (error) => {
+    console.log(error);
+  };
+  REQUESTS.DELETE_TODO(
     {
       "Content-Type": "application/json",
       Authorization: `Bearer ${localStorage.getItem("token")}`,
     },
-    body,
     colback,
-    errorColback
+    errorColback,
+    id
   );
-};
+}
 
-export default send_todo;
+export default delete_todo_list;

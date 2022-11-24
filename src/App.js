@@ -15,6 +15,7 @@ function App() {
   return (
     <div className="App">
       <Navigates />
+      <Burgermenu />
       <Routes>
         <Route path="/" element={<Register />} />
         <Route path="/login" element={<Login />} />

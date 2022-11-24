@@ -33,8 +33,7 @@ function UserProfile() {
     <>
       <div className={classes["background_profile_page"]}>
         <div className={classes["profile_image"]}></div>
-        <div className={classes["add_photo"]}></div>
-        <div className={classes["profile_aboute"]}>
+           <div className={classes["profile_aboute"]}>
           <EditProfile GetProfile={GetProfile} />
           <UploadImg />
           <p>name: {userprofile?.name}</p>

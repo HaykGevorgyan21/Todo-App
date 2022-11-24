@@ -31,6 +31,14 @@ const REQUESTS = {
   GET_TODO: (headers, colback, errorColback) => {
     request(URLS.add_todo, "GET", {}, headers, colback, errorColback);
   },
+
+  DELETE_TODO: (headers, colback, errorColback, id) => {
+    request(URLS.add_todo, "DELETE", {}, headers, colback, errorColback, id);
+  },
+
+  UPDATE_TODO: (body, headers, colback, errorColback, id) => {
+    request(URLS.add_todo, "PUT", body, headers, colback, errorColback, id);
+  },
 };
 
 export default REQUESTS;

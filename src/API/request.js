@@ -4,23 +4,19 @@ export default function request(
   body = null,
   headers,
   colback,
-  errorColback
+  errorColback,
+  id = ""
 ) {
   let paramas = {
     method: method,
     headers: headers,
     redirect: "follow",
   };
-  if(method !== 'GET'){
-    paramas.body = JSON.stringify(body)
+  if (method !== "GET") {
+    paramas.body = JSON.stringify(body);
   }
-  fetch(url, paramas)
+  fetch(`${url}${id}`, paramas)
     .then((data) => data.json())
     .then((response) => colback(response))
     .catch((error) => errorColback(error));
 }
-
-
-
-
-

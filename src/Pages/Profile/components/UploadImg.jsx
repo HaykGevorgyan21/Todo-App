@@ -5,7 +5,7 @@ import REQUESTS from "../../../API/requests";
 import FormData from "form-data";
 
 function UploadImg() {
-  // const [form] = Form.useForm();
+  const [form] = Form.useForm();
   const [profileImg, setProfileImg] = useState([]);
   const [profileImgUrl, setProfileImgUrl] = useState("");
   const [loading, setLoading] = useState(false);
@@ -41,8 +41,10 @@ function UploadImg() {
     let formData = new FormData();
 
     profileImg.forEach((e) => {
-      formData.append("avatar", e);
+      formData.append("avatar",e.uid)
+    console.log(e.file,"dcdcd")
     });
+
 
     for (var key of formData.entries()) {
       console.log(key[0] + ", " + key[1]);

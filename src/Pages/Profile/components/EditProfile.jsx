@@ -62,9 +62,9 @@ function EditProfile({ GetProfile }) {
   });
   return (
     <>
-      <button onClick={handlechangeprofile} className={classes.show_button}>
-        .
-      </button>
+      <button
+        onClick={handlechangeprofile}
+        className={classes.show_button}></button>
       <div className={classes.backgrond_form}>
         <div className={show ? classes.register_form : classes.show}>
           <h3 className={classes.change_settings}>Change Your Settings</h3>

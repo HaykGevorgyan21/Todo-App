@@ -1,33 +1,65 @@
 .input_todo{
-   margin-left: 40%;
-   border: none;
+    border: none;
    outline: none;
-   background-color: rgb(230, 207, 177);
-   color: rgb(1, 96, 96);
+   background-color: #FFEF8F;
+   color: #002954;
    font-size: 18px;
    font-weight: bold;
    font-family: sans-serif;
-   width: 250px;
+   width: 240px;
    padding: 5px;
-   margin-top: 100px;
+ 
     
 }
 
-body{
-    background-image: url(https://phonoteka.org/uploads/posts/2021-04/1619079453_30-phonoteka_org-p-ofisnii-stol-fon-31.jpg);
+
+.background{
+    background-image: linear-gradient(to right top, #5e17ec, #5d16e8, #5c16e4, #5a15e1, #5915dd);
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100%;
+    height: 99vh;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
 }
 
 .add_todo{
-    background-color: #5A15DF;
+     background-color: #FFEF8F;
+    color:#5915dd;
     border: none;
-    padding: 7px;
+    width: 80px;
     font-size: 14px;
     font-family: sans-serif;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-    width: 70px;
+      cursor: pointer;
+    font-weight: bold;
+    border-left: solid white;
+
 
 }
+
+.background_input{
+    width: 320px;
+    display: flex;
+    margin-left: 40%;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 620px){
+  .background{
+    overflow: hidden;
+    max-width: 100%;
+  }
+.input_todo{
+
+  width: 180px;
+}
+  .background_input{
+    width: 260px;
+    margin-left: 16%;
+  }
+  .add_todo{
+    width: 80px;
+  }
+}
+       

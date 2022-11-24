@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import Login from "..";
 function LoginForm() {
   const navigate = useNavigate();
-  
+const [state, setState]= useState('')
   const [registerinputsvalue, setRegisterinputsvalue] = useState({
     email: "",
     password: "",
@@ -14,29 +14,34 @@ function LoginForm() {
   const user_register = (event) => {
     event.preventDefault();
     const colback = (data) => {
-      if(data.token){
- localStorage.setItem("token", data.token);
-      console.log(data,'data')
+      if (data.token) {
+        localStorage.setItem("token", data.token);
+        console.log(data, "data");
         navigate("/home");
-        
-        
+      }else{
+        setState('invalid password')
       }
-      
-     
-      };
     
+    };
+
     const errorColback = (error) => {
       console.log(error);
     };
     REQUESTS.LOGIN(registerinputsvalue, colback, errorColback);
   };
-  console.log(localStorage.getItem('token'), 25)
+
+
+
+  
+  console.log(localStorage.getItem("token"), 25);
   const handelchange = (event) => {
     setRegisterinputsvalue({
       ...registerinputsvalue,
       [event.target.name]: event.target.value,
     });
   };
+
+
   console.log(registerinputsvalue);
   const register_form_inputs = RegisterData.map((el, index) => {
     if (index > 0 && index < 3) {
@@ -55,6 +60,7 @@ function LoginForm() {
       );
     }
   });
+
   return (
     <div>
       <div className={classes.background_image_form}></div>
@@ -63,8 +69,9 @@ function LoginForm() {
           <h2>Log In</h2>
           <form onSubmit={user_register}>
             {register_form_inputs}
+            <span className={classes.invalid_password}>{state}</span>
             <button className={classes.register_button}>Login</button>
-          </form>
+                      </form>
         </div>
       </div>
     </div>

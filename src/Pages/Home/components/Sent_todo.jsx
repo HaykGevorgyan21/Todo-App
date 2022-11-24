@@ -1,13 +1,11 @@
 import { useState } from "react";
-import REQUESTS from "../../../API/requests";
-import send_todo from "./sendTodo";
+import AddTodo from "./AddTodo";
 import get_todo_list from "./getTodo";
 import { useEffect } from "react";
 import RenderTodoList from "./RenderTodo";
-import classes from '../style/sendtodo.module.scss'
+import classes from "../style/sendtodo.module.scss";
 
 function SendTodoList() {
-  const [todo, setDodo] = useState();
   const [todoList, setTodoList] = useState([]);
 
   useEffect(() => {
@@ -15,20 +13,9 @@ function SendTodoList() {
   }, []);
 
   return (
-    <div>
-      <input className={classes['input_todo']}
-        onChange={(e) => {
-          setDodo(e.target.value);
-        }}
-      />
-      <button className={classes['add_todo']}
-        onClick={() => {
-          send_todo(todo, get_todo_list(setTodoList));
-        }}
-      >
-        add todo
-      </button>
-      <RenderTodoList todo={todoList} />
+    <div className={classes["background"]}>
+      <AddTodo setTodoList={setTodoList} />
+      <RenderTodoList todo={todoList} setTodoList={setTodoList} />
     </div>
   );
 }

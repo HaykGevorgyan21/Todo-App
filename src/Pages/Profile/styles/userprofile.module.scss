@@ -5,21 +5,24 @@
 }
 
 .background_profile_page{
-
+overflow: hidden;
+display: grid;
     position:absolute;
     width: 100%;
-    height: 92vh;
+    height: 100%;
     background-image: linear-gradient(to right top, #5e17ec, #5d16e8, #5c16e4, #5a15e1, #5915dd);
 }
 
 
 .profile_image{
-    width: 250px;
-    height: 250px;
+    display: inline-block;
+    margin: auto;
+    width: 200px;
+    height: 200px;
     margin-top: 20px;
     margin-left: 20px;
     border-radius: 16px;
-    background-image: url(https://marketplace.canva.com/EAE6OJ2qP8U/1/0/1600w/canva-gamer-with-glasses-character-twitch-profile-picture-CVfgWIJGgRo.jpg);
+    background-image: url(https://empowher.org/wp-content/uploads/2021/03/image-placeholder-350x350-1.png);
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -49,42 +52,90 @@
     padding-top: 12px;
     column-gap: 5px;
 }
-
-@media only screen and (max-width: 1255px){
-
-    .background_profile_page{
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-           }
-           .profile_aboute{
-            text-align: center;
-            margin-top: 50px;
-           }
+@media only screen and (max-width: 443px){
 .profile_image{
-    margin: auto;
-    margin-top: 30px;
+    width: 150px;
+    height: 150px;
+    margin-top: 40px;
 }
-.add_photo{
-    margin: auto;
-}
-}
+  }
 
-@media only screen and (max-width: 715){
+// @media only screen and (max-width: 1255px){
 
-    .background_profile_page{
-        background-repeat: repeat;
-       overflow: hidden;
-    }
+//     .background_profile_page{
+//         width: 100%;
+//         justify-content: center;
+//         align-items: center;
+//         overflow: hidden;
+//            }
+//            .profile_aboute{
+//             text-align: center;
+//             margin-top: -200px;
+//            }
+// .profile_image{
+//     margin: auto;
+//     margin-top: 30px;
+// }
+// .add_photo{
+//     margin: auto;
+// }
+// }
 
-}
-@media only screen and (max-width: 1212px){
-    .background_profile_page{
-        flex-wrap: wrap;
-        height: 100%;
-     }
-     .profile_aboute{
-   text-align: center; 
-  margin-left: 20%;
-     }
-   }
+// @media only screen and (max-width: 715){
+
+//     .background_profile_page{
+//         background-repeat: repeat;
+//        overflow: hidden;
+//     }
+
+// }
+// @media only screen and (max-width: 1212px){
+//     .background_profile_page{
+//         flex-wrap: wrap;
+//         height: 100%;
+        
+//      }
+//      .profile_aboute{
+//    text-align: center; 
+//   margin-left: 20%;
+//      }
+//    }
+
+// //    @media only screen and (max-width: 1050px){
+// //     .profile_aboute{
+// //         margin-top: 100px;
+// //     }
+// //    }
+//    @media only screen and (max-width: 999px){
+// .profile_image{
+//     margin-top: 340px;
+//     position: absolute;
+// }
+//    }
+
+//    @media only screen and (max-width: 620px){
+  
+// .background_profile_page{
+//     overflow: hidden;
+// }
+
+//        }
+
+//        @media only screen and (max-width: 480px){
+// .background_profile_page{
+//     display: block;
+// }
+//         .profile_image{
+//             display: block;
+//             margin-left: 140px;
+//             margin-top: 190px;
+//         }
+//         .profile_aboute{
+//             display: block;
+//             margin-top: 185px;
+//             margin-left: 0px;
+//         }
+        
+  
+              
+//                }
